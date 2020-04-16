@@ -39,7 +39,11 @@ class NicePageState extends State<NicePage> {
                   ..rotateX(_offset.dx)
                   ..rotateY(_offset.dy),
         alignment: FractionalOffset.center,
-      child: _defaultApp(context),
+      child: GestureDetector(
+        onPanUpdate: (details) => setState(()=>_offset += details.delta),//delta 手指触摸坐标
+        onDoubleTap: ()=>setState(()=> _offset = Offset.zero),
+        child: _defaultApp(context),
+      ),
     );
   }
 
