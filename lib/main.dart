@@ -12,10 +12,28 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: NicePage(),
     );
   }
 }
+
+class NicePage extends StatefulWidget{
+  @override
+  State<StatefulWidget> createState() {
+
+    return NicePageState();
+  }
+
+}
+
+class NicePageState extends State<NicePage> {
+  @override
+  Widget build(BuildContext context) {
+
+    return null;
+  }
+}
+
 
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
